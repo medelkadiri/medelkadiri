@@ -22,11 +22,13 @@ I am currently working toward contributing to open source projects to strengthen
 
 ### Socials
 
-[![GitHub](https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg)](https://www.github.com/medelkadiri)
-[![Twitter](https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/twitter.svg)](https://www.x.com/medelkadiridev)
-[![Hashnode](https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/hashnode.svg)](https://hashnode.com/@medelkadiri.hashnode.dev)
-[![LinkedIn](https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg)](https://www.linkedin.com/in/mohammedelkadiri/)
-[![YouTube](https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/youtube.svg)](https://www.youtube.com/@under_the_abstraction)
+<p align="left">
+<a href="https://www.github.com/medelkadiri" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="36" height="36" alt="GitHub" /></a>
+<a href="https://www.x.com/medelkadiridev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/twitter.svg" width="36" height="36" alt="Twitter" /></a>
+<a href="https://hashnode.com/@medelkadiri.hashnode.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/hashnode.svg" width="36" height="36" alt="Hashnode" /></a>
+<a href="https://www.linkedin.com/in/mohammedelkadiri/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" width="36" height="36" alt="LinkedIn" /></a>
+<a href="https://www.youtube.com/@under_the_abstraction" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/youtube.svg" width="36" height="36" alt="YouTube" /></a>
+</p>
 
 <a href="https://www.github.com/medelkadiri" target="_blank" rel="noreferrer"><img src="https://img.shields.io/github/followers/medelkadiri?logo=github&style=for-the-badge&color=0891b2&labelColor=181824" /></a>
 
