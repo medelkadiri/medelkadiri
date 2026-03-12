@@ -23,7 +23,7 @@ I am currently working toward contributing to open source projects to strengthen
 ### Socials
 
 <p align="left">
-<a href="https://www.github.com/medelkadiri" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="36" height="36" alt="GitHub" /></a>
+<a href="https://www.credly.com/users/mohammed-el-kadiri-0" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/credly/0066FF" width="36" height="36" alt="Credly" /></a>
 <a href="https://www.x.com/medelkadiridev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/twitter.svg" width="36" height="36" alt="Twitter" /></a>
 <a href="https://medium.com/@medelkadiri" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/medium.svg" width="36" height="36" alt="Medium" /></a>
 <a href="https://www.linkedin.com/in/mohammedelkadiri/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" width="36" height="36" alt="LinkedIn" /></a>
