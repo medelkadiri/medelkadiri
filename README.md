@@ -4,13 +4,13 @@ Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-912
 Software Engineer - Systems / Infrastructure
 --------------------------------------------
 
-Passionate about operating systems and infrastructure, with expertise in systems engineering across Linux, macOS, and Windows. Skilled in multithreading, concurrency, and advanced debugging (GDB, WinDbg, dbx), with strong knowledge of JVM internals and performance tuning.
+Focused on low-level software development and operating systems, with strong systems engineering experience across Linux, Unix, macOS, and Windows internals. I bring solid expertise in multithreading, concurrency, memory and performance analysis, and advanced debugging with GDB, WinDbg, and dbx, alongside JVM internals and runtime tuning.
 
-Experienced in DevOps and cloud technologies, including Docker, Kubernetes, OpenShift, Terraform, Ansible, AWS, and Azure, alongside networking protocols from TCP/UDP to 4G/5G and gRPC.
+I work comfortably in C, C++, and Core Java to build reliable, performance-critical software. Delivered test automations, GUI applications, and embedded systems, with consistent attention to correctness, efficiency, and maintainability.
 
-I plan to get more practice on RTOS and expand into Rust, Assembly and Embedded Linux in the future.
+I maintain a strong interest in quantum computing and its long-term impact on systems architecture and infrastructure software.
 
-I am currently working toward contributing to open source projects to strengthen community knowledge and advance core infrastructure development.
+Currently, I contribute to the Linux kernel (with a submitted patch currently under review) and I am developing jakashell, a high-performance shell focused on efficient resource and process management. I want to expand my expertise into Rust, Assembly, Embedded Linux, and RTOS.
 
 *   🌍  I'm based in Rabat, Morocco.
 *   ✉️  You can contact me at [mdekad@outlook.com](mailto:mdekad@outlook.com)
