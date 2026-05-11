@@ -21,23 +21,6 @@ This is my systems engineering workspace. The projects here deal with the lowest
 
 ---
 
-### 📊 Dashboard
-
-<div align="center">
-
-| Metric | Value |
-|--------|-------|
-| 🔧 Active Systems Projects | 3 |
-| 🐧 Linux Kernel Patches | 1 (under review) |
-| 🛡️ Security Hardening Issues Resolved | 1 / 7 |
-| 🖥️ Platforms Supported | Linux · macOS · FreeBSD |
-| ⚡ Languages | C · C++17 · POSIX · ARM64/x86_64 |
-| 📈 Lines of Production Systems Code | ~2,500+ |
-
-</div>
-
----
-
 ### What I Build
 
 <table>
@@ -86,21 +69,20 @@ Patches submitted to the upstream Linux kernel. Focus on resource management and
 
 ### Technical Focus
 
-<div align="center">
-
-</div>
+| Area | Details |
+|------|---------|
+| Kernel / OS Internals | Linux kernel, macOS/XNU, syscall interfaces, VFS, memory management |
+| Security Hardening | fd bounds checking, CLOEXEC enforcement, EINTR-safe operations, stack protection |
+| Concurrency | Lock-free structures, atomics, memory ordering, spinlocks, RCU |
+| Performance | perf, flamegraphs, strace, eBPF, Google Benchmark |
+| Cross-platform | Linux, macOS, FreeBSD, compile-time platform abstraction |
 
 ---
 
 ### Tools
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/c-colored.svg" alt="C" title="C" width="32" height="32" />&nbsp;&nbsp;
-<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/cplusplus-colored.svg" alt="C++" title="C++" width="32" height="32" />&nbsp;&nbsp;
-<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/linux-colored.svg" alt="Linux" title="Linux" width="32" height="32" />&nbsp;&nbsp;
-<img src="https://raw.githubusercontent.com/danielcranney/profileme-dev/main/public/icons/skills/macos-colored.svg" alt="macOS" title="macOS" width="32" height="32" />&nbsp;&nbsp;
-<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/gnubash-colored.svg" alt="Bash" title="Bash" width="32" height="32" />&nbsp;&nbsp;
-<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg" alt="Git" title="Git" width="32" height="32" />
+<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/c-colored.svg" alt="C" title="C" width="32" height="32" /> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/cplusplus-colored.svg" alt="C++" title="C++" width="32" height="32" /> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/linux-colored.svg" alt="Linux" title="Linux" width="32" height="32" /> <img src="https://raw.githubusercontent.com/danielcranney/profileme-dev/main/public/icons/skills/macos-colored.svg" alt="macOS" title="macOS" width="32" height="32" /> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/gnubash-colored.svg" alt="Bash" title="Bash" width="32" height="32" /> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg" alt="Git" title="Git" width="32" height="32" />
 </p>
 
 <p align="center">
@@ -109,9 +91,13 @@ Patches submitted to the upstream Linux kernel. Focus on resource management and
 
 ---
 
+### Activity
+
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=medelkadiri&show_icons=true&theme=github_dark&hide_border=true&count_private=true&hide=stars" width="48%" />
+<img src="https://github-readme-stats.vercel.app/api?username=medelkadiri&show_icons=true&theme=github_dark&hide_border=true&count_private=true&hide=stars&include_all_commits=true" width="48%" />
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=medelkadiri&theme=github-dark-blue&hide_border=true" width="48%" />
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=medelkadiri&theme=github-dark&hide_border=true&area=true" width="97%" />
 
 </div>
