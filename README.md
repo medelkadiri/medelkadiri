@@ -1,8 +1,17 @@
-## Mohammed EL Kadiri
+<div align="center">
+
+# Mohammed EL Kadiri
+
+**Systems Software Engineer · Kernel Development · Security Hardening**
 
 Systems software engineer focused on kernel development, operating system internals, and security hardening.
-
 Currently contributing to the Linux kernel and building production-grade systems components in C/C++17.
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mohammedelkadiri/)
+[![Medium](https://img.shields.io/badge/Medium-000000?style=flat&logo=medium&logoColor=white)](https://medium.com/@medelkadiri)
+[![Linux Kernel](https://img.shields.io/badge/Linux_Kernel-Contributor-FCC624?style=flat&logo=linux&logoColor=black)](https://github.com/torvalds/linux)
+
+</div>
 
 ---
 
@@ -12,44 +21,69 @@ This is my systems engineering workspace. The projects here deal with the lowest
 
 ---
 
+### 📊 Dashboard
+
+<div align="center">
+
+| Metric | Value |
+|--------|-------|
+| 🔧 Active Systems Projects | 3 |
+| 🐧 Linux Kernel Patches | 1 (under review) |
+| 🛡️ Security Hardening Issues Resolved | 1 / 7 |
+| 🖥️ Platforms Supported | Linux · macOS · FreeBSD |
+| ⚡ Languages | C · C++17 · POSIX · ARM64/x86_64 |
+| 📈 Lines of Production Systems Code | ~2,500+ |
+
+</div>
+
+---
+
 ### What I Build
 
-- **Linux kernel contributor** — patches under review on [torvalds/linux](https://github.com/torvalds/linux)
-- **[systems-engineering](https://github.com/medelkadiri/systems-engineering)** — C++17 systems components with security hardening, benchmarking, and cross-platform support (Linux/macOS/BSD): RAII fd wrapper, lock-free data structures, memory pool allocators, thread pools
-- **[jakashell](https://github.com/medelkadiri/jakashell)** — high-performance Linux shell with zero-copy IPC via mmap, CPU-affinity scheduling, and eBPF-based telemetry
+<table>
+<tr>
+<td width="50%">
+
+**[systems-engineering](https://github.com/medelkadiri/systems-engineering)**
+
+Production-grade C++17 systems components with security hardening, benchmarking, and cross-platform support.
+
+`RAII fd wrapper` · `lock-free stack` · `memory pool` · `thread pool` · `ring buffer`
+
+![C++17](https://img.shields.io/badge/C++17-00599C?style=flat&logo=cplusplus&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
+![macOS](https://img.shields.io/badge/macOS-000000?style=flat&logo=apple&logoColor=white)
+
+</td>
+<td width="50%">
+
+**[jakashell](https://github.com/medelkadiri/jakashell)**
+
+High-performance Linux shell with zero-copy IPC via mmap, CPU-affinity scheduling, and eBPF-based telemetry.
+
+`mmap IPC` · `CPU affinity` · `eBPF tracing` · `process management`
+
+![C](https://img.shields.io/badge/C-A8B9CC?style=flat&logo=c&logoColor=black)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
+![eBPF](https://img.shields.io/badge/eBPF-FF6600?style=flat)
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+
+**[Linux Kernel Contributions](https://github.com/torvalds/linux)**
+
+Patches submitted to the upstream Linux kernel. Focus: resource management, syscall interfaces.
+
+![Kernel](https://img.shields.io/badge/Linux_Kernel-6.x-FCC624?style=flat&logo=linux&logoColor=black)
+
+</td>
+</tr>
+</table>
 
 ---
 
 ### Technical Focus
 
-| Area | Details |
-|------|---------|
-| Kernel / OS internals | Linux kernel, macOS/XNU, syscall interfaces, VFS, memory management |
-| Security hardening | fd bounds checking, CLOEXEC enforcement, EINTR-safe operations, stack protection |
-| Concurrency | Lock-free structures, atomics, memory ordering, spinlocks, RCU |
-| Performance | perf, flamegraphs, strace, eBPF, Google Benchmark |
-| Cross-platform | Linux, macOS, FreeBSD — compile-time platform abstraction |
-
----
-
-### Tools
-
-<p>
-<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/c-colored.svg" alt="C" title="C" width="28" height="28" />
-<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/cplusplus-colored.svg" alt="C++" title="C++" width="28" height="28" />
-<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/linux-colored.svg" alt="Linux" title="Linux" width="28" height="28" />
-<img src="https://raw.githubusercontent.com/danielcranney/profileme-dev/main/public/icons/skills/macos-colored.svg" alt="macOS" title="macOS" width="28" height="28" />
-<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/gnubash-colored.svg" alt="Bash" title="Bash" width="28" height="28" />
-<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg" alt="Git" title="Git" width="28" height="28" />
-</p>
-
-`C` · `C++17` · `POSIX` · `x86_64/ARM64` · `CMake` · `Make/Kbuild` · `GDB/LLDB` · `perf` · `strace` · `eBPF` · `Git` · `Linux` · `macOS/XNU`
-
----
-
-### Links
-
-<p>
-<a href="https://www.linkedin.com/in/mohammedelkadiri/" target="_blank"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" width="28" height="28" alt="LinkedIn" /></a>
-<a href="https://medium.com/@medelkadiri" target="_blank"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/medium.svg" width="28" height="28" alt="Medium" /></a>
-</p>
+<div align="center">
