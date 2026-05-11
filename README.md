@@ -95,8 +95,7 @@ Patches submitted to the upstream Linux kernel. Focus on resource management and
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=medelkadiri&show_icons=true&theme=github_dark&hide_border=true&count_private=true&hide=stars&include_all_commits=true" width="48%" />
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=medelkadiri&theme=github-dark-blue&hide_border=true" width="48%" />
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=medelkadiri&theme=github-dark-blue&hide_border=true" width="60%" />
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=medelkadiri&theme=github-dark&hide_border=true&area=true" width="97%" />
 
