@@ -17,7 +17,7 @@ Currently contributing to the Linux kernel and building production-grade systems
 
 ### What This GitHub Contains
 
-This is my systems engineering workspace. The projects here deal with the lowest layers of software — the code that sits between hardware and applications. File descriptors, memory allocators, thread synchronization, shell interpreters, and kernel patches. If you are not familiar with systems programming: this is the code that makes operating systems like Linux and macOS work reliably, securely, and fast.
+This is my systems engineering workspace. The projects here deal with the lowest layers of software, the code that sits between hardware and applications. File descriptors, memory allocators, thread synchronization, shell interpreters, and kernel patches. If you are not familiar with systems programming: this is the code that makes operating systems like Linux and macOS work reliably, securely, and fast.
 
 ---
 
@@ -74,7 +74,7 @@ High-performance Linux shell with zero-copy IPC via mmap, CPU-affinity schedulin
 
 **[Linux Kernel Contributions](https://github.com/torvalds/linux)**
 
-Patches submitted to the upstream Linux kernel. Focus: resource management, syscall interfaces.
+Patches submitted to the upstream Linux kernel. Focus on resource management and syscall interfaces.
 
 ![Kernel](https://img.shields.io/badge/Linux_Kernel-6.x-FCC624?style=flat&logo=linux&logoColor=black)
 
@@ -87,3 +87,31 @@ Patches submitted to the upstream Linux kernel. Focus: resource management, sysc
 ### Technical Focus
 
 <div align="center">
+
+</div>
+
+---
+
+### Tools
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/c-colored.svg" alt="C" title="C" width="32" height="32" />&nbsp;&nbsp;
+<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/cplusplus-colored.svg" alt="C++" title="C++" width="32" height="32" />&nbsp;&nbsp;
+<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/linux-colored.svg" alt="Linux" title="Linux" width="32" height="32" />&nbsp;&nbsp;
+<img src="https://raw.githubusercontent.com/danielcranney/profileme-dev/main/public/icons/skills/macos-colored.svg" alt="macOS" title="macOS" width="32" height="32" />&nbsp;&nbsp;
+<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/gnubash-colored.svg" alt="Bash" title="Bash" width="32" height="32" />&nbsp;&nbsp;
+<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg" alt="Git" title="Git" width="32" height="32" />
+</p>
+
+<p align="center">
+<code>C</code> · <code>C++17</code> · <code>POSIX</code> · <code>x86_64/ARM64</code> · <code>CMake</code> · <code>Make/Kbuild</code> · <code>GDB/LLDB</code> · <code>perf</code> · <code>strace</code> · <code>eBPF</code> · <code>Git</code> · <code>Linux</code> · <code>macOS/XNU</code>
+</p>
+
+---
+
+<div align="center">
+
+<img src="https://github-readme-stats.vercel.app/api?username=medelkadiri&show_icons=true&theme=github_dark&hide_border=true&count_private=true&hide=stars" width="48%" />
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=medelkadiri&theme=github-dark-blue&hide_border=true" width="48%" />
+
+</div>
