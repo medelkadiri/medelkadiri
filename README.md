@@ -9,7 +9,7 @@ Currently contributing to the Linux kernel and building production-grade systems
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mohammedelkadiri/)
 [![Medium](https://img.shields.io/badge/Medium-000000?style=flat&logo=medium&logoColor=white)](https://medium.com/@medelkadiri)
-[![Linux Kernel](https://img.shields.io/badge/Linux_Kernel-Contributor-FCC624?style=flat&logo=linux&logoColor=black)](https://github.com/torvalds/linux)
+[![Linux Kernel](https://img.shields.io/badge/Linux_Kernel-Contributor-FCC624?style=flat&logo=linux&logoColor=black)](https://lore.kernel.org/all/?q=from%3Amed08elkadiri%40gmail.com)
 
 </div>
 
@@ -55,11 +55,11 @@ High-performance Linux shell with zero-copy IPC via mmap, CPU-affinity schedulin
 <tr>
 <td colspan="2" align="center">
 
-**[Linux Kernel Contributions](https://github.com/torvalds/linux)**
+**[Linux Kernel Contributions](https://lore.kernel.org/all/?q=from%3Amed08elkadiri%40gmail.com)**
 
-Patches submitted to the upstream Linux kernel. Focus on security hardening and resource isolation.
+Upstream patches to the Linux kernel. Current focus: slab allocator security hardening against cross-cache heap exploitation.
 
-![Kernel](https://img.shields.io/badge/Linux_Kernel-6.x-FCC624?style=flat&logo=linux&logoColor=black)
+![Kernel](https://img.shields.io/badge/Linux_Kernel-6.17-FCC624?style=flat&logo=linux&logoColor=black)
 
 </td>
 </tr>
@@ -73,7 +73,7 @@ Patches submitted to the upstream Linux kernel. Focus on security hardening and 
 
 <div align="center">
 
-*Upstream contributions to the Linux kernel — automatically tracked from [lore.kernel.org](https://lore.kernel.org/all/?q=from%3Amed08elkadiri%40gmail.com)*
+*Upstream contributions to the Linux kernel — tracked from [lore.kernel.org](https://lore.kernel.org/all/?q=from%3Amed08elkadiri%40gmail.com)*
 
 </div>
 
@@ -88,8 +88,22 @@ Patches submitted to the upstream Linux kernel. Focus on security hardening and 
 <th>Date</th>
 </tr>
 <tr>
+<td align="center"><code>5</code></td>
+<td><a href="https://lore.kernel.org/all/20260606155856.15548-1-med08elkadiri@gmail.com/"><b>docs/mm: document slab cache isolation with SLAB_NO_MERGE</b></a><br><sub>Document when and how to use SLAB_NO_MERGE to protect security-critical slab caches from cross-cache heap exploitation.</sub></td>
+<td><code>Documentation/mm</code></td>
+<td><img src="https://img.shields.io/badge/Submitted-2196F3?style=flat-square" /></td>
+<td><sub>Jun 2026</sub></td>
+</tr>
+<tr>
+<td align="center"><code>4</code></td>
+<td><a href="https://lore.kernel.org/all/20260606142558.13809-1-med08elkadiri@gmail.com/"><b>cred: prevent slab cache merging for cred_jar</b></a><br><sub>Add SLAB_NO_MERGE to isolate struct cred (uid, gid, capabilities) from cross-cache heap attacks.</sub></td>
+<td><code>kernel/cred</code></td>
+<td><img src="https://img.shields.io/badge/Submitted-2196F3?style=flat-square" /></td>
+<td><sub>Jun 2026</sub></td>
+</tr>
+<tr>
 <td align="center"><code>3</code></td>
-<td><a href="https://lore.kernel.org/all/20260604125034.13757-1-med08elkadiri@gmail.com/"><b>keys: prevent slab cache merging for key_jar</b></a><br><sub>Add SLAB_NO_MERGE to isolate struct key from cross-cache heap attacks (CVE-2022-29582 class).</sub><br><sub>Acked-by: Vlastimil Babka (SUSE)</sub></td>
+<td><a href="https://lore.kernel.org/all/20260604125034.13757-1-med08elkadiri@gmail.com/"><b>keys: prevent slab cache merging for key_jar</b></a><br><sub>Add SLAB_NO_MERGE to isolate struct key from cross-cache heap attacks.</sub><br><sub>Acked-by: Vlastimil Babka (SUSE) — SLUB maintainer</sub></td>
 <td><code>security/keys</code></td>
 <td><img src="https://img.shields.io/badge/Acked--by-8BC34A?style=flat-square" /></td>
 <td><sub>Jun 2026</sub></td>
@@ -116,16 +130,16 @@ Patches submitted to the upstream Linux kernel. Focus on security hardening and 
 
 <table>
 <tr>
-<td align="center"><strong>Total</strong><br><code>3</code></td>
+<td align="center"><strong>Total</strong><br><code>5</code></td>
 <td align="center"><strong>Accepted</strong><br><code>1</code></td>
 <td align="center"><strong>Acked</strong><br><code>1</code></td>
-<td align="center"><strong>Subsystems</strong><br><code>keys · media · net</code></td>
+<td align="center"><strong>Subsystems</strong><br><code>mm · cred · keys · media · net</code></td>
 </tr>
 </table>
 
-> 🟣 **Merged** &nbsp; 🟢 **Accepted / Acked** &nbsp; 🔵 **Submitted** &nbsp; 🟠 **Needs Respin**
+> 🟢 **Accepted / Acked** &nbsp; 🔵 **Submitted**
 
-<sub>Last updated: 2026-06-05 · Auto-synced from lore.kernel.org</sub>
+<sub>Last updated: 2026-06-06</sub>
 
 </div>
 
@@ -138,7 +152,7 @@ Patches submitted to the upstream Linux kernel. Focus on security hardening and 
 | Area | Details |
 |------|---------|
 | Kernel / OS Internals | Linux kernel, macOS/XNU, syscall interfaces, VFS, memory management |
-| Security Hardening | fd bounds checking, CLOEXEC enforcement, EINTR-safe operations, stack protection |
+| Security Hardening | Slab isolation, SLUB allocator, cross-cache attack mitigation, fd safety |
 | Concurrency | Lock-free structures, atomics, memory ordering, spinlocks, RCU |
 | Performance | perf, flamegraphs, strace, eBPF, Google Benchmark |
 | Cross-platform | Linux, macOS, FreeBSD, compile-time platform abstraction |
