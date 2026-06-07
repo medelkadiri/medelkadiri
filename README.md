@@ -73,7 +73,7 @@ Upstream patches to the Linux kernel. Current focus: slab allocator security har
 
 <div align="center">
 
-*Upstream contributions to the Linux kernel — tracked from [lore.kernel.org](https://lore.kernel.org/all/?q=from%3Amed08elkadiri%40gmail.com)*
+*Upstream contributions to the Linux kernel - tracked from [lore.kernel.org](https://lore.kernel.org/all/?q=from%3Amed08elkadiri%40gmail.com)*
 
 </div>
 
@@ -103,7 +103,7 @@ Upstream patches to the Linux kernel. Current focus: slab allocator security har
 </tr>
 <tr>
 <td align="center"><code>3</code></td>
-<td><a href="https://lore.kernel.org/all/20260604125034.13757-1-med08elkadiri@gmail.com/"><b>keys: prevent slab cache merging for key_jar</b></a><br><sub>Add SLAB_NO_MERGE to isolate struct key from cross-cache heap attacks.</sub><br><sub>Acked-by: Vlastimil Babka (SUSE) — SLUB maintainer</sub></td>
+<td><a href="https://lore.kernel.org/all/20260604125034.13757-1-med08elkadiri@gmail.com/"><b>keys: prevent slab cache merging for key_jar</b></a><br><sub>Add SLAB_NO_MERGE to isolate struct key from cross-cache heap attacks.</sub><br><sub>Acked-by: Vlastimil Babka (SUSE) - SLUB maintainer</sub></td>
 <td><code>security/keys</code></td>
 <td><img src="https://img.shields.io/badge/Acked--by-8BC34A?style=flat-square" /></td>
 <td><sub>04/06/2026</sub></td>
