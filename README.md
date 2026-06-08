@@ -168,8 +168,6 @@ Upstream patches to the Linux kernel. Current focus: slab allocator security har
 
 <div align="center">
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=medelkadiri&theme=github-dark-blue&hide_border=true" width="60%" />
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=medelkadiri&theme=github-dark&hide_border=true&area=true" width="97%" />
+*Kernel contributions tracked on [lore.kernel.org](https://lore.kernel.org/all/?q=from%3Amed08elkadiri%40gmail.com) · Projects on [GitHub](https://github.com/medelkadiri?tab=repositories)*
 
 </div>
