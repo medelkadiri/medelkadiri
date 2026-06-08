@@ -103,9 +103,9 @@ Upstream patches to the Linux kernel. Current focus: slab allocator security har
 </tr>
 <tr>
 <td align="center"><code>3</code></td>
-<td><a href="https://lore.kernel.org/all/20260604125034.13757-1-med08elkadiri@gmail.com/"><b>keys: prevent slab cache merging for key_jar</b></a><br><sub>Add SLAB_NO_MERGE to isolate struct key from cross-cache heap attacks.</sub><br><sub>Acked-by: Vlastimil Babka (SUSE) - SLUB maintainer</sub></td>
+<td><a href="https://lore.kernel.org/all/20260604125034.13757-1-med08elkadiri@gmail.com/"><b>keys: prevent slab cache merging for key_jar</b></a><br><sub>Add SLAB_NO_MERGE to isolate struct key from cross-cache heap attacks.</sub><br><sub>Reviewed-by: Jarkko Sakkinen · Acked-by: Vlastimil Babka (SUSE) - SLUB maintainer</sub></td>
 <td><code>security/keys</code></td>
-<td><img src="https://img.shields.io/badge/Acked--by-8BC34A?style=flat-square" /></td>
+<td><img src="https://img.shields.io/badge/Applied-4CAF50?style=flat-square" /></td>
 <td><sub>04/06/2026</sub></td>
 </tr>
 <tr>
@@ -131,15 +131,15 @@ Upstream patches to the Linux kernel. Current focus: slab allocator security har
 <table>
 <tr>
 <td align="center"><strong>Total</strong><br><code>5</code></td>
-<td align="center"><strong>Accepted</strong><br><code>1</code></td>
-<td align="center"><strong>Reviewed / Acked</strong><br><code>2</code></td>
+<td align="center"><strong>Applied / Accepted</strong><br><code>2</code></td>
+<td align="center"><strong>Reviewed / Acked</strong><br><code>1</code></td>
 <td align="center"><strong>Subsystems</strong><br><code>mm · cred · keys · media · net</code></td>
 </tr>
 </table>
 
-> 🟢 **Accepted / Reviewed / Acked** &nbsp; 🔵 **Submitted**
+> 🟢 **Applied / Accepted / Reviewed / Acked** &nbsp; 🔵 **Submitted**
 
-<sub>Last updated: 07/06/2026</sub>
+<sub>Last updated: 08/06/2026</sub>
 
 </div>
 
