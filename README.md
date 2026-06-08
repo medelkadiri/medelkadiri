@@ -9,7 +9,7 @@ Currently contributing to the Linux kernel and building production-grade systems
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mohammedelkadiri/)
 [![Medium](https://img.shields.io/badge/Medium-000000?style=flat&logo=medium&logoColor=white)](https://medium.com/@medelkadiri)
-[![Linux Kernel](https://img.shields.io/badge/Linux_Kernel-Contributor-FCC624?style=flat&logo=linux&logoColor=black)](https://lore.kernel.org/all/?q=from%3Amed08elkadiri%40gmail.com)
+[![Linux Kernel](https://img.shields.io/badge/Linux_Kernel-Contributor-FCC624?style=flat&logo=linux&logoColor=black)](https://lore.kernel.org/all/?q=med08elkadiri%40gmail.com)
 
 </div>
 
@@ -55,7 +55,7 @@ High-performance Linux shell with zero-copy IPC via mmap, CPU-affinity schedulin
 <tr>
 <td colspan="2" align="center">
 
-**[Linux Kernel Contributions](https://lore.kernel.org/all/?q=from%3Amed08elkadiri%40gmail.com)**
+**[Linux Kernel Contributions](https://lore.kernel.org/all/?q=med08elkadiri%40gmail.com)**
 
 Upstream patches to the Linux kernel. Current focus: slab allocator security hardening and bounds checking.
 
@@ -73,7 +73,7 @@ Upstream patches to the Linux kernel. Current focus: slab allocator security har
 
 <div align="center">
 
-*Upstream contributions to the Linux kernel - tracked from [lore.kernel.org](https://lore.kernel.org/all/?q=from%3Amed08elkadiri%40gmail.com)*
+*Upstream contributions to the Linux kernel - tracked from [lore.kernel.org](https://lore.kernel.org/all/?q=med08elkadiri%40gmail.com)*
 
 </div>
 
@@ -168,6 +168,6 @@ Upstream patches to the Linux kernel. Current focus: slab allocator security har
 
 <div align="center">
 
-*Kernel contributions tracked on [lore.kernel.org](https://lore.kernel.org/all/?q=from%3Amed08elkadiri%40gmail.com) · Projects on [GitHub](https://github.com/medelkadiri?tab=repositories)*
+*Kernel contributions tracked on [lore.kernel.org](https://lore.kernel.org/all/?q=med08elkadiri%40gmail.com) · Projects on [GitHub](https://github.com/medelkadiri?tab=repositories)*
 
 </div>
