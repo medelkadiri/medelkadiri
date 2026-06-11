@@ -88,10 +88,24 @@ Upstream patches to the Linux kernel. Current focus: slab allocator security har
 <th>Date</th>
 </tr>
 <tr>
+<td align="center"><code>6</code></td>
+<td><a href="https://lore.kernel.org/all/20260610125655.14523-3-med08elkadiri@gmail.com/"><b>media: venus: fix payload size calculation in parse_raw_formats()</b></a><br><sub>Accumulate actual size during loop instead of using last iteration's num_planes for all entries.</sub><br><sub>Reviewed-by: Dmitry Baryshkov (Qualcomm)</sub></td>
+<td><code>media/venus</code></td>
+<td><img src="https://img.shields.io/badge/Reviewed--by-8BC34A?style=flat-square" /></td>
+<td><sub>10/06/2026</sub></td>
+</tr>
+<tr>
+<td align="center"><code>5</code></td>
+<td><a href="https://lore.kernel.org/all/20260610125655.14523-2-med08elkadiri@gmail.com/"><b>media: venus: fix payload size returned by parse_caps() and parse_alloc_mode()</b></a><br><sub>Return full consumed size (header + entries) to prevent parser desynchronization.</sub><br><sub>Reviewed-by: Dmitry Baryshkov (Qualcomm)</sub></td>
+<td><code>media/venus</code></td>
+<td><img src="https://img.shields.io/badge/Reviewed--by-8BC34A?style=flat-square" /></td>
+<td><sub>10/06/2026</sub></td>
+</tr>
+<tr>
 <td align="center"><code>4</code></td>
-<td><a href="https://lore.kernel.org/all/20260606142558.13809-1-med08elkadiri@gmail.com/"><b>cred: prevent slab cache merging for cred_jar</b></a><br><sub>Add SLAB_NO_MERGE to isolate struct cred (uid, gid, capabilities) from cross-cache heap attacks.</sub></td>
+<td><a href="https://lore.kernel.org/all/20260611070100.15012-1-med08elkadiri@gmail.com/"><b>cred: prevent slab cache merging for cred_jar</b></a><br><sub>Add SLAB_NO_MERGE to isolate struct cred from cross-cache heap attacks.</sub><br><sub>Reviewed-by: Kees Cook</sub></td>
 <td><code>kernel/cred</code></td>
-<td><img src="https://img.shields.io/badge/Submitted-2196F3?style=flat-square" /></td>
+<td><img src="https://img.shields.io/badge/Reviewed--by-8BC34A?style=flat-square" /></td>
 <td><sub>06/06/2026</sub></td>
 </tr>
 <tr>
@@ -123,16 +137,16 @@ Upstream patches to the Linux kernel. Current focus: slab allocator security har
 
 <table>
 <tr>
-<td align="center"><strong>Total</strong><br><code>4</code></td>
+<td align="center"><strong>Total</strong><br><code>6</code></td>
 <td align="center"><strong>Applied / Accepted</strong><br><code>2</code></td>
-<td align="center"><strong>Reviewed / Acked</strong><br><code>2</code></td>
+<td align="center"><strong>Reviewed / Acked</strong><br><code>4</code></td>
 <td align="center"><strong>Subsystems</strong><br><code>cred · keys · media · net</code></td>
 </tr>
 </table>
 
 > 🟢 **Applied / Accepted / Reviewed / Acked** &nbsp; 🔵 **Submitted**
 
-<sub>Last updated: 08/06/2026</sub>
+<sub>Last updated: 11/06/2026</sub>
 
 </div>
 
