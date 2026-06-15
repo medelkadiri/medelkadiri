@@ -88,6 +88,27 @@ Upstream patches to the Linux kernel. Current focus: slab allocator security har
 <th>Date</th>
 </tr>
 <tr>
+<td align="center"><code>9</code></td>
+<td><a href="https://lore.kernel.org/all/?q=s%3A%22KEYS%3A+avoid+filesystem+reclaim+while+holding+keyring-%3Esem%22"><b>KEYS: avoid filesystem reclaim while holding keyring->sem</b></a><br><sub>Wrap assoc_array_insert() with memalloc_nofs_save/restore to prevent keyring->sem -> fs_reclaim -> keyring->sem lockdep cycle reported by syzbot.</sub><br><sub>Reported-by: syzbot · Cc: stable@vger.kernel.org · Fixes: d7e7b9af104c</sub></td>
+<td><code>security/keys</code></td>
+<td><img src="https://img.shields.io/badge/Submitted-2196F3?style=flat-square" /></td>
+<td><sub>14/06/2026</sub></td>
+</tr>
+<tr>
+<td align="center"><code>8</code></td>
+<td><a href="https://lore.kernel.org/all/?q=s%3A%22keys%3A+keyctl_pkey%3A+replace+BUG+with+return+-EOPNOTSUPP%22"><b>keys: keyctl_pkey: replace BUG with return -EOPNOTSUPP</b></a><br><sub>Replace BUG() in keyctl_pkey_params_get_2() and keyctl_pkey_e_d_s() default cases with -EOPNOTSUPP for graceful error handling.</sub><br><sub>Reviewed-by: Jarkko Sakkinen</sub></td>
+<td><code>security/keys</code></td>
+<td><img src="https://img.shields.io/badge/Reviewed--by-8BC34A?style=flat-square" /></td>
+<td><sub>13/06/2026</sub></td>
+</tr>
+<tr>
+<td align="center"><code>7</code></td>
+<td><a href="https://lore.kernel.org/all/?q=s%3A%22keys%3A+request_key%3A+replace+BUG+with+return+-EINVAL%22"><b>keys: request_key: replace BUG with return -EINVAL</b></a><br><sub>Replace BUG() in construct_get_dest_keyring() default case with return -EINVAL to handle unimplemented group keyring destination gracefully.</sub><br><sub>Reviewed-by: Jarkko Sakkinen</sub></td>
+<td><code>security/keys</code></td>
+<td><img src="https://img.shields.io/badge/Reviewed--by-8BC34A?style=flat-square" /></td>
+<td><sub>13/06/2026</sub></td>
+</tr>
+<tr>
 <td align="center"><code>6</code></td>
 <td><a href="https://lore.kernel.org/all/20260610125655.14523-3-med08elkadiri@gmail.com/"><b>media: venus: fix payload size calculation in parse_raw_formats()</b></a><br><sub>Accumulate actual size during loop instead of using last iteration's num_planes for all entries.</sub><br><sub>Reviewed-by: Dmitry Baryshkov (Qualcomm)</sub></td>
 <td><code>media/venus</code></td>
@@ -137,16 +158,17 @@ Upstream patches to the Linux kernel. Current focus: slab allocator security har
 
 <table>
 <tr>
-<td align="center"><strong>Total</strong><br><code>6</code></td>
+<td align="center"><strong>Total</strong><br><code>9</code></td>
 <td align="center"><strong>Applied / Accepted</strong><br><code>2</code></td>
-<td align="center"><strong>Reviewed / Acked</strong><br><code>4</code></td>
+<td align="center"><strong>Reviewed / Acked</strong><br><code>6</code></td>
+<td align="center"><strong>Submitted</strong><br><code>1</code></td>
 <td align="center"><strong>Subsystems</strong><br><code>cred · keys · media · net</code></td>
 </tr>
 </table>
 
 > 🟢 **Applied / Accepted / Reviewed / Acked** &nbsp; 🔵 **Submitted**
 
-<sub>Last updated: 11/06/2026</sub>
+<sub>Last updated: 15/06/2026</sub>
 
 </div>
 
