@@ -57,9 +57,9 @@ High-performance Linux shell with zero-copy IPC via mmap, CPU-affinity schedulin
 
 **[Linux Kernel Contributions](https://lore.kernel.org/all/?q=med08elkadiri%40gmail.com)**
 
-Upstream patches to the Linux kernel. Current focus: slab allocator security hardening and bounds checking.
+Upstream Linux kernel patches focused on security hardening, key management, allocator isolation, and bounds checking.
 
-![Kernel](https://img.shields.io/badge/Linux_Kernel-6.17-FCC624?style=flat&logo=linux&logoColor=black)
+![Kernel](https://img.shields.io/badge/Linux_Kernel-Contributor-FCC624?style=flat&logo=linux&logoColor=black)
 
 </td>
 </tr>
@@ -73,7 +73,7 @@ Upstream patches to the Linux kernel. Current focus: slab allocator security har
 
 <div align="center">
 
-*Upstream contributions to the Linux kernel - tracked from [lore.kernel.org](https://lore.kernel.org/all/?q=med08elkadiri%40gmail.com)*
+*Upstream contributions to the Linux kernel — tracked from [lore.kernel.org](https://lore.kernel.org/all/?q=med08elkadiri%40gmail.com) and subsystem maintainer trees*
 
 </div>
 
@@ -87,69 +87,131 @@ Upstream patches to the Linux kernel. Current focus: slab allocator security har
 <th>Status</th>
 <th>Date</th>
 </tr>
+
 <tr>
 <td align="center"><code>9</code></td>
-<td><a href="https://lore.kernel.org/all/?q=s%3A%22KEYS%3A+avoid+filesystem+reclaim+while+holding+keyring-%3Esem%22"><b>KEYS: avoid filesystem reclaim while holding keyring->sem</b></a><br><sub>Wrap assoc_array_insert() with memalloc_nofs_save/restore to prevent keyring->sem -> fs_reclaim -> keyring->sem lockdep cycle reported by syzbot.</sub><br><sub>Reported-by: syzbot · Cc: stable@vger.kernel.org · Fixes: d7e7b9af104c</sub></td>
+<td>
+<a href="https://lore.kernel.org/all/?q=s%3A%22KEYS%3A+avoid+filesystem+reclaim+while+holding+keyring-%3Esem%22"><b>KEYS: avoid filesystem reclaim while holding keyring-&gt;sem</b></a>
+<br>
+<sub>Wrap assoc_array_insert() with memalloc_nofs_save/restore to prevent keyring-&gt;sem -&gt; fs_reclaim -&gt; keyring-&gt;sem lockdep cycle reported by syzbot.</sub>
+<br>
+<sub>Reported-by: syzbot · Cc: stable@vger.kernel.org · Fixes: d7e7b9af104c</sub>
+</td>
 <td><code>security/keys</code></td>
 <td><img src="https://img.shields.io/badge/Submitted-2196F3?style=flat-square" /></td>
 <td><sub>14/06/2026</sub></td>
 </tr>
+
 <tr>
 <td align="center"><code>8</code></td>
-<td><a href="https://lore.kernel.org/all/?q=s%3A%22keys%3A+keyctl_pkey%3A+replace+BUG+with+return+-EOPNOTSUPP%22"><b>keys: keyctl_pkey: replace BUG with return -EOPNOTSUPP</b></a><br><sub>Replace BUG() in keyctl_pkey_params_get_2() and keyctl_pkey_e_d_s() default cases with -EOPNOTSUPP for graceful error handling.</sub><br><sub>Reviewed-by: Jarkko Sakkinen</sub></td>
+<td>
+<a href="https://lore.kernel.org/all/?q=s%3A%22keys%3A+keyctl_pkey%3A+replace+BUG+with+return+-EOPNOTSUPP%22"><b>keys: keyctl_pkey: replace BUG with return -EOPNOTSUPP</b></a>
+<br>
+<sub>Replace BUG() in keyctl_pkey_params_get_2() and keyctl_pkey_e_d_s() default cases with -EOPNOTSUPP for graceful error handling.</sub>
+<br>
+<sub>Reviewed-by: Jarkko Sakkinen · Queued in <a href="https://git.kernel.org/pub/scm/linux/kernel/git/jarkko/linux-tpmdd.git/log/?h=for-next-keys">for-next-keys</a></sub>
+</td>
 <td><code>security/keys</code></td>
-<td><img src="https://img.shields.io/badge/Reviewed--by-8BC34A?style=flat-square" /></td>
+<td><img src="https://img.shields.io/badge/Queued-for--next--keys-4CAF50?style=flat-square" /></td>
 <td><sub>13/06/2026</sub></td>
 </tr>
+
 <tr>
 <td align="center"><code>7</code></td>
-<td><a href="https://lore.kernel.org/all/?q=s%3A%22keys%3A+request_key%3A+replace+BUG+with+return+-EINVAL%22"><b>keys: request_key: replace BUG with return -EINVAL</b></a><br><sub>Replace BUG() in construct_get_dest_keyring() default case with return -EINVAL to handle unimplemented group keyring destination gracefully.</sub><br><sub>Reviewed-by: Jarkko Sakkinen</sub></td>
+<td>
+<a href="https://lore.kernel.org/all/?q=s%3A%22keys%3A+request_key%3A+replace+BUG+with+return+-EINVAL%22"><b>keys: request_key: replace BUG with return -EINVAL</b></a>
+<br>
+<sub>Replace BUG() in construct_get_dest_keyring() default case with return -EINVAL to handle unimplemented group keyring destination gracefully.</sub>
+<br>
+<sub>Reviewed-by: Jarkko Sakkinen · Queued in <a href="https://git.kernel.org/pub/scm/linux/kernel/git/jarkko/linux-tpmdd.git/log/?h=for-next-keys">for-next-keys</a></sub>
+</td>
 <td><code>security/keys</code></td>
-<td><img src="https://img.shields.io/badge/Reviewed--by-8BC34A?style=flat-square" /></td>
+<td><img src="https://img.shields.io/badge/Queued-for--next--keys-4CAF50?style=flat-square" /></td>
 <td><sub>13/06/2026</sub></td>
 </tr>
+
 <tr>
 <td align="center"><code>6</code></td>
-<td><a href="https://lore.kernel.org/all/20260610125655.14523-3-med08elkadiri@gmail.com/"><b>media: venus: fix payload size calculation in parse_raw_formats()</b></a><br><sub>Accumulate actual size during loop instead of using last iteration's num_planes for all entries.</sub><br><sub>Reviewed-by: Dmitry Baryshkov (Qualcomm)</sub></td>
+<td>
+<a href="https://lore.kernel.org/all/20260610125655.14523-3-med08elkadiri@gmail.com/"><b>media: venus: fix payload size calculation in parse_raw_formats()</b></a>
+<br>
+<sub>Accumulate actual size during loop instead of using last iteration's num_planes for all entries.</sub>
+<br>
+<sub>Reviewed-by: Dmitry Baryshkov, Qualcomm</sub>
+</td>
 <td><code>media/venus</code></td>
 <td><img src="https://img.shields.io/badge/Reviewed--by-8BC34A?style=flat-square" /></td>
 <td><sub>10/06/2026</sub></td>
 </tr>
+
 <tr>
 <td align="center"><code>5</code></td>
-<td><a href="https://lore.kernel.org/all/20260610125655.14523-2-med08elkadiri@gmail.com/"><b>media: venus: fix payload size returned by parse_caps() and parse_alloc_mode()</b></a><br><sub>Return full consumed size (header + entries) to prevent parser desynchronization.</sub><br><sub>Reviewed-by: Dmitry Baryshkov (Qualcomm)</sub></td>
+<td>
+<a href="https://lore.kernel.org/all/20260610125655.14523-2-med08elkadiri@gmail.com/"><b>media: venus: fix payload size returned by parse_caps() and parse_alloc_mode()</b></a>
+<br>
+<sub>Return full consumed size, header + entries, to prevent parser desynchronization.</sub>
+<br>
+<sub>Reviewed-by: Dmitry Baryshkov, Qualcomm</sub>
+</td>
 <td><code>media/venus</code></td>
 <td><img src="https://img.shields.io/badge/Reviewed--by-8BC34A?style=flat-square" /></td>
 <td><sub>10/06/2026</sub></td>
 </tr>
+
 <tr>
 <td align="center"><code>4</code></td>
-<td><a href="https://lore.kernel.org/all/20260611070100.15012-1-med08elkadiri@gmail.com/"><b>cred: prevent slab cache merging for cred_jar</b></a><br><sub>Add SLAB_NO_MERGE to isolate struct cred from cross-cache heap attacks.</sub><br><sub>Reviewed-by: Kees Cook</sub></td>
+<td>
+<a href="https://lore.kernel.org/all/20260611070100.15012-1-med08elkadiri@gmail.com/"><b>cred: prevent slab cache merging for cred_jar</b></a>
+<br>
+<sub>Add SLAB_NO_MERGE to isolate struct cred from unrelated slab caches as a hardening measure.</sub>
+<br>
+<sub>Reviewed-by: Kees Cook</sub>
+</td>
 <td><code>kernel/cred</code></td>
 <td><img src="https://img.shields.io/badge/Reviewed--by-8BC34A?style=flat-square" /></td>
 <td><sub>06/06/2026</sub></td>
 </tr>
+
 <tr>
 <td align="center"><code>3</code></td>
-<td><a href="https://lore.kernel.org/all/20260604125034.13757-1-med08elkadiri@gmail.com/"><b>keys: prevent slab cache merging for key_jar</b></a><br><sub>Add SLAB_NO_MERGE to isolate struct key from cross-cache heap attacks.</sub><br><sub>Reviewed-by: Jarkko Sakkinen · Acked-by: Vlastimil Babka (SUSE)</sub></td>
+<td>
+<a href="https://lore.kernel.org/all/?q=s%3A%22keys%3A+prevent+slab+cache+merging+for+key_jar%22"><b>keys: prevent slab cache merging for key_jar</b></a>
+<br>
+<sub>Add SLAB_NO_MERGE to isolate struct key from unrelated slab caches as a hardening measure.</sub>
+<br>
+<sub>Acked-by: Vlastimil Babka, SUSE · Queued in <a href="https://git.kernel.org/pub/scm/linux/kernel/git/jarkko/linux-tpmdd.git/log/?h=for-next-keys">for-next-keys</a></sub>
+</td>
 <td><code>security/keys</code></td>
-<td><img src="https://img.shields.io/badge/Applied-4CAF50?style=flat-square" /></td>
+<td><img src="https://img.shields.io/badge/Queued-for--next--keys-4CAF50?style=flat-square" /></td>
 <td><sub>04/06/2026</sub></td>
 </tr>
+
 <tr>
 <td align="center"><code>2</code></td>
-<td><a href="https://lore.kernel.org/all/20260607111933.6398-1-med08elkadiri@gmail.com/"><b>media: venus: Annotate flex arrays with __counted_by()</b></a><br><sub>Improve run-time bounds checking via CONFIG_UBSAN_BOUNDS and compile-time __builtin_dynamic_object_size().</sub><br><sub>Reviewed-by: Dmitry Baryshkov (Qualcomm) · Reviewed-by: Konrad Dybcio (Qualcomm)</sub></td>
+<td>
+<a href="https://lore.kernel.org/all/20260607111933.6398-1-med08elkadiri@gmail.com/"><b>media: venus: Annotate flex arrays with __counted_by()</b></a>
+<br>
+<sub>Improve run-time bounds checking via CONFIG_UBSAN_BOUNDS and compile-time __builtin_dynamic_object_size().</sub>
+<br>
+<sub>Reviewed-by: Dmitry Baryshkov, Qualcomm · Reviewed-by: Konrad Dybcio, Qualcomm</sub>
+</td>
 <td><code>media/venus</code></td>
 <td><img src="https://img.shields.io/badge/Reviewed--by-8BC34A?style=flat-square" /></td>
 <td><sub>07/06/2026</sub></td>
 </tr>
+
 <tr>
 <td align="center"><code>1</code></td>
-<td><a href="https://lore.kernel.org/all/20260322150733.45817-1-med08elkadiri@gmail.com/"><b>sfc: fix spelling mistake</b></a><br><sub>Forwarded upstream by maintainer Edward Cree for inclusion in next firmware header regeneration.</sub></td>
+<td>
+<a href="https://lore.kernel.org/all/20260322150733.45817-1-med08elkadiri@gmail.com/"><b>sfc: fix spelling mistake</b></a>
+<br>
+<sub>Forwarded upstream by maintainer Edward Cree for inclusion in next firmware header regeneration.</sub>
+</td>
 <td><code>net/sfc</code></td>
 <td><img src="https://img.shields.io/badge/Accepted-4CAF50?style=flat-square" /></td>
 <td><sub>22/03/2026</sub></td>
 </tr>
+
 </table>
 
 <br>
@@ -159,16 +221,16 @@ Upstream patches to the Linux kernel. Current focus: slab allocator security har
 <table>
 <tr>
 <td align="center"><strong>Total</strong><br><code>9</code></td>
-<td align="center"><strong>Applied / Accepted</strong><br><code>2</code></td>
-<td align="center"><strong>Reviewed / Acked</strong><br><code>6</code></td>
+<td align="center"><strong>Queued / Accepted</strong><br><code>4</code></td>
+<td align="center"><strong>Reviewed / Acked</strong><br><code>4</code></td>
 <td align="center"><strong>Submitted</strong><br><code>1</code></td>
 <td align="center"><strong>Subsystems</strong><br><code>cred · keys · media · net</code></td>
 </tr>
 </table>
 
-> 🟢 **Applied / Accepted / Reviewed / Acked** &nbsp; 🔵 **Submitted**
+> 🟢 **Queued / Accepted** &nbsp; 🟩 **Reviewed / Acked** &nbsp; 🔵 **Submitted**
 
-<sub>Last updated: 15/06/2026</sub>
+<sub>Last updated: 18/06/2026</sub>
 
 </div>
 
@@ -191,7 +253,12 @@ Upstream patches to the Linux kernel. Current focus: slab allocator security har
 ### Tools
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/c-colored.svg" alt="C" title="C" width="32" height="32" /> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/cplusplus-colored.svg" alt="C++" title="C++" width="32" height="32" /> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/linux-colored.svg" alt="Linux" title="Linux" width="32" height="32" /> <img src="https://raw.githubusercontent.com/danielcranney/profileme-dev/main/public/icons/skills/macos-colored.svg" alt="macOS" title="macOS" width="32" height="32" /> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/gnubash-colored.svg" alt="Bash" title="Bash" width="32" height="32" /> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg" alt="Git" title="Git" width="32" height="32" />
+<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/c-colored.svg" alt="C" title="C" width="32" height="32" />
+<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/cplusplus-colored.svg" alt="C++" title="C++" width="32" height="32" />
+<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/linux-colored.svg" alt="Linux" title="Linux" width="32" height="32" />
+<img src="https://raw.githubusercontent.com/danielcranney/profileme-dev/main/public/icons/skills/macos-colored.svg" alt="macOS" title="macOS" width="32" height="32" />
+<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/gnubash-colored.svg" alt="Bash" title="Bash" width="32" height="32" />
+<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg" alt="Git" title="Git" width="32" height="32" />
 </p>
 
 <p align="center">
