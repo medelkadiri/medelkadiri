@@ -2,10 +2,10 @@
 
 # Mohammed EL Kadiri
 
-**Systems Software Engineer · Linux Kernel Contributor · Security & Reliability Engineering**
+**Senior Systems Software Engineer · Linux Kernel Contributor · Security & Reliability Engineering**
 
-Systems software engineer specializing in Linux kernel development, operating-system internals, security hardening, and low-level reliability engineering.  
-Contributor to upstream Linux subsystems including media, credentials, keys, fscrypt, and networking; experienced in debugging kernel faults, improving parser correctness, and hardening memory-sensitive code in C/C++17.
+Systems software engineer focused on Linux kernel development, operating-system internals, security hardening, and low-level reliability engineering.  
+I work on issues where correctness, memory safety, synchronization, and failure handling matter: kernel subsystems, firmware-facing drivers, key management, filesystem encryption, and performance-critical systems components in C/C++17.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mohammedelkadiri/)
 [![Medium](https://img.shields.io/badge/Medium-000000?style=flat&logo=medium&logoColor=white)](https://medium.com/@medelkadiri)
@@ -17,9 +17,9 @@ Contributor to upstream Linux subsystems including media, credentials, keys, fsc
 
 ### What This GitHub Contains
 
-This is my systems-engineering workspace: low-level software that operates at the boundary between hardware, kernels, and applications. The work here covers resource lifetime management, memory allocation, concurrency, process execution, IPC, observability, and kernel-level security and reliability fixes.
+This is my systems-engineering workspace: software that operates close to the operating system, hardware interfaces, and runtime infrastructure.
 
-My approach emphasizes correctness under failure, explicit ownership, measurable performance, and maintainable interfaces for systems software.
+The projects and kernel work here focus on the parts of a system that must remain correct under stress and failure: memory ownership, file-descriptor lifetime, concurrent execution, process control, IPC, parser correctness, kernel locking, and security boundaries. My engineering approach prioritizes clear invariants, measurable behavior, defensive design, and maintainable low-level code.
 
 ---
 
@@ -31,7 +31,7 @@ My approach emphasizes correctness under failure, explicit ownership, measurable
 
 **[systems-engineering](https://github.com/medelkadiri/systems-engineering)**
 
-Production-oriented C++17 systems components emphasizing correctness, secure resource ownership, concurrency safety, benchmarking, and cross-platform portability.
+Production-oriented C++17 systems components designed around explicit ownership, secure resource management, concurrency safety, benchmarking, and cross-platform portability.
 
 `RAII fd wrapper` · `lock-free stack` · `memory pool` · `thread pool` · `ring buffer`
 
@@ -44,7 +44,7 @@ Production-oriented C++17 systems components emphasizing correctness, secure res
 
 **[jakashell](https://github.com/medelkadiri/jakashell)**
 
-Linux shell and process-management project exploring zero-copy IPC, CPU-affinity-aware execution, memory mapping, and eBPF-based runtime telemetry.
+Linux shell and process-management project exploring zero-copy IPC, memory-mapped communication, CPU-affinity-aware execution, and eBPF-based runtime telemetry.
 
 `mmap IPC` · `CPU affinity` · `eBPF tracing` · `process management`
 
@@ -59,7 +59,7 @@ Linux shell and process-management project exploring zero-copy IPC, CPU-affinity
 
 **[Linux Kernel Contributions](https://lore.kernel.org/all/?q=med08elkadiri%40gmail.com)**
 
-Upstream Linux kernel work spanning media-driver correctness, flexible-array bounds hardening, key-management robustness, slab-cache isolation, and fscrypt/keyring reliability analysis.
+Upstream Linux kernel contributions spanning driver correctness, memory-safety hardening, key-management reliability, slab-cache isolation, and filesystem-encryption debugging.
 
 ![Kernel](https://img.shields.io/badge/Linux_Kernel-Contributor-FCC624?style=flat&logo=linux&logoColor=black)
 
@@ -75,7 +75,7 @@ Upstream Linux kernel work spanning media-driver correctness, flexible-array bou
 
 <div align="center">
 
-*Upstream contributions and credited kernel reports — tracked through [lore.kernel.org](https://lore.kernel.org/all/?q=med08elkadiri%40gmail.com), maintainer trees, and stable-kernel notifications*
+*Upstream Linux kernel patches and credited reports — tracked through [lore.kernel.org](https://lore.kernel.org/all/?q=med08elkadiri%40gmail.com), subsystem maintainer trees, and stable-kernel notifications*
 
 </div>
 
@@ -95,9 +95,11 @@ Upstream Linux kernel work spanning media-driver correctness, flexible-array bou
 <td>
 <b>fscrypt keyring / filesystem-reclaim lockdep issue</b>
 <br>
-<sub>Reported an fscrypt/keyring locking issue associated with filesystem reclaim and keyring locking. The resulting fscrypt redesign replaced the master-key user keyring with a simpler per-user linked-list model while retaining quota accounting.</sub>
+<sub>Investigated and reported a kernel locking problem affecting fscrypt master-key user tracking. The issue involved the interaction between keyring locking and filesystem memory reclaim, which could trigger a lockdep warning under fuzzing. The upstream fix simplified fscrypt's user-claim tracking model by replacing an internal keyring with an explicit linked list while preserving per-user key-quota accounting.</sub>
 <br>
-<sub>Reported-by credit in upstream commit <code>696c030e1e34</code> · Resolution authored by Eric Biggers · Added to the 6.12-stable and 7.1-stable trees.</sub>
+<sub>Recruiter context: systems-level debugging across filesystem encryption, key management, locking, memory reclaim, and automated kernel fuzzing.</sub>
+<br>
+<sub>Reported-by credit in upstream commit <code>696c030e1e34</code> · Fix authored by Eric Biggers · Added to the 6.12-stable and 7.1-stable trees.</sub>
 </td>
 <td><code>fs/crypto · security/keys</code></td>
 <td><img src="https://img.shields.io/badge/Credited_in_Upstream_Fix-4CAF50?style=flat-square" /></td>
@@ -109,7 +111,9 @@ Upstream Linux kernel work spanning media-driver correctness, flexible-array bou
 <td>
 <a href="https://lore.kernel.org/all/?q=s%3A%22KEYS%3A+avoid+filesystem+reclaim+while+holding+keyring-%3Esem%22"><b>KEYS: avoid filesystem reclaim while holding keyring-&gt;sem</b></a>
 <br>
-<sub>Proposed a targeted memalloc_nofs_save()/restore() mitigation for a keyring-&gt;sem → filesystem-reclaim → keyring-&gt;sem lockdep cycle reported by syzbot.</sub>
+<sub>Proposed a focused mitigation for a lock-ordering cycle involving the kernel keyring semaphore and filesystem memory reclaim. The patch uses the kernel's <code>memalloc_nofs_save()</code>/<code>memalloc_nofs_restore()</code> mechanism to prevent filesystem reclaim while modifying a keyring associative array, removing the conditions that can lead to recursive locking.</sub>
+<br>
+<sub>Recruiter context: demonstrates root-cause analysis of concurrency bugs that are difficult to reproduce, using lockdep and syzbot reports to reason about kernel lock hierarchy and memory-allocation behavior.</sub>
 <br>
 <sub>The investigation contributed to the subsequent upstream fscrypt redesign credited above.</sub>
 </td>
@@ -123,7 +127,9 @@ Upstream Linux kernel work spanning media-driver correctness, flexible-array bou
 <td>
 <a href="https://lore.kernel.org/all/?q=s%3A%22keys%3A+keyctl_pkey%3A+replace+BUG+with+return+-EOPNOTSUPP%22"><b>keys: keyctl_pkey: replace BUG with return -EOPNOTSUPP</b></a>
 <br>
-<sub>Replace BUG() paths in asymmetric-key operation dispatch with -EOPNOTSUPP, preserving kernel availability and providing explicit unsupported-operation handling.</sub>
+<sub>Replaced fatal <code>BUG()</code> assertions in asymmetric-key operation handling with a standard <code>-EOPNOTSUPP</code> error return. Instead of terminating the kernel when an unsupported operation reaches an unexpected dispatch path, the kernel now fails safely and communicates the unsupported condition to userspace.</sub>
+<br>
+<sub>Recruiter context: converts a potential system-wide crash into controlled fault handling, improving availability and making the API behavior safer for malformed, unexpected, or future operation types.</sub>
 <br>
 <sub>Reviewed-by: Jarkko Sakkinen · Queued in <a href="https://git.kernel.org/pub/scm/linux/kernel/git/jarkko/linux-tpmdd.git/log/?h=for-next-keys">for-next-keys</a></sub>
 </td>
@@ -137,7 +143,9 @@ Upstream Linux kernel work spanning media-driver correctness, flexible-array bou
 <td>
 <a href="https://lore.kernel.org/all/?q=s%3A%22keys%3A+request_key%3A+replace+BUG+with+return+-EINVAL%22"><b>keys: request_key: replace BUG with return -EINVAL</b></a>
 <br>
-<sub>Replace a BUG() path in request-key destination handling with -EINVAL, converting an invalid state into controlled error handling.</sub>
+<sub>Replaced a <code>BUG()</code> path in request-key destination handling with <code>-EINVAL</code>. Invalid or unimplemented keyring destination states are now rejected through normal error handling rather than triggering a kernel crash.</sub>
+<br>
+<sub>Recruiter context: a small but high-value reliability change in a security-sensitive kernel subsystem. It strengthens the kernel's handling of invalid states and reduces crash exposure at the userspace/kernel boundary.</sub>
 <br>
 <sub>Reviewed-by: Jarkko Sakkinen · Queued in <a href="https://git.kernel.org/pub/scm/linux/kernel/git/jarkko/linux-tpmdd.git/log/?h=for-next-keys">for-next-keys</a></sub>
 </td>
@@ -151,7 +159,9 @@ Upstream Linux kernel work spanning media-driver correctness, flexible-array bou
 <td>
 <a href="https://lore.kernel.org/all/20260610125655.14523-3-med08elkadiri@gmail.com/"><b>media: venus: fix payload size calculation in parse_raw_formats()</b></a>
 <br>
-<sub>Corrected firmware-response parsing by accumulating each format entry's actual payload size rather than applying the final entry's plane count to all entries.</sub>
+<sub>Fixed incorrect parsing of firmware responses in Qualcomm's Venus video-codec driver. The original code calculated the size of all raw-format records using the plane count from only the final record. When records had different numbers of planes, the parser could advance by the wrong number of bytes. The fix accumulates the actual size of each individual record during parsing.</sub>
+<br>
+<sub>Recruiter context: correctness work at a hardware/firmware boundary, where inaccurate binary-buffer parsing can desynchronize protocol handling and lead to invalid reads, corrupted capability data, or device instability.</sub>
 <br>
 <sub>Reviewed-by: Dmitry Baryshkov, Qualcomm · Committed to <code>media.git/next</code></sub>
 </td>
@@ -165,7 +175,9 @@ Upstream Linux kernel work spanning media-driver correctness, flexible-array bou
 <td>
 <a href="https://lore.kernel.org/all/20260610125655.14523-2-med08elkadiri@gmail.com/"><b>media: venus: fix payload size returned by parse_caps() and parse_alloc_mode()</b></a>
 <br>
-<sub>Fixed consumed-size accounting for variable-length HFI capability and allocation-mode responses, preventing parser desynchronization when advancing through firmware buffers.</sub>
+<sub>Corrected consumed-byte accounting in two variable-length firmware-message parsers in the Qualcomm Venus driver. Both functions previously returned only the fixed header size while omitting their flexible-array payload. Because the higher-level parser uses that return value to locate the next message, this could cause parser desynchronization when multiple responses were present in the same buffer.</sub>
+<br>
+<sub>Recruiter context: identifies and fixes a subtle protocol-parser invariant: every parser must report exactly how much input it consumed. This is essential for robust device-driver communication and memory-safe binary parsing.</sub>
 <br>
 <sub>Fixes: <code>9edaaa8e3e15</code> · Cc: stable@vger.kernel.org · Reviewed-by: Dmitry Baryshkov, Qualcomm · Committed to <code>media.git/next</code></sub>
 </td>
@@ -179,7 +191,9 @@ Upstream Linux kernel work spanning media-driver correctness, flexible-array bou
 <td>
 <a href="https://lore.kernel.org/all/20260611070100.15012-1-med08elkadiri@gmail.com/"><b>cred: prevent slab cache merging for cred_jar</b></a>
 <br>
-<sub>Add SLAB_NO_MERGE to isolate credential objects from unrelated slab caches, reducing cross-cache attack surface and strengthening credential-memory integrity.</sub>
+<sub>Added <code>SLAB_NO_MERGE</code> to the allocator cache used for Linux credential objects (<code>struct cred</code>). Credentials represent process identity and authorization state, including user and group IDs, capabilities, and security-relevant execution context. Preventing this cache from merging with unrelated allocation types improves object isolation.</sub>
+<br>
+<sub>Recruiter context: defense-in-depth kernel hardening against cross-cache memory-corruption techniques, reducing the opportunity for an unrelated heap bug to be used to corrupt security-critical credential data.</sub>
 <br>
 <sub>Reviewed-by: Kees Cook</sub>
 </td>
@@ -193,7 +207,9 @@ Upstream Linux kernel work spanning media-driver correctness, flexible-array bou
 <td>
 <a href="https://lore.kernel.org/all/?q=s%3A%22keys%3A+prevent+slab+cache+merging+for+key_jar%22"><b>keys: prevent slab cache merging for key_jar</b></a>
 <br>
-<sub>Add SLAB_NO_MERGE to isolate struct key allocations from unrelated caches as a defense-in-depth hardening measure.</sub>
+<sub>Added <code>SLAB_NO_MERGE</code> to the slab cache used for <code>struct key</code>, a core object in Linux key management. The change ensures key objects are allocated from a dedicated cache rather than sharing an allocator cache with unrelated objects of compatible size.</sub>
+<br>
+<sub>Recruiter context: security hardening at the kernel allocator layer. Dedicated allocation domains make exploitation of cross-cache heap-corruption bugs more difficult in a subsystem responsible for credentials, secrets, certificates, and cryptographic keys.</sub>
 <br>
 <sub>Acked-by: Vlastimil Babka, SUSE · Queued in <a href="https://git.kernel.org/pub/scm/linux/kernel/git/jarkko/linux-tpmdd.git/log/?h=for-next-keys">for-next-keys</a></sub>
 </td>
@@ -207,7 +223,9 @@ Upstream Linux kernel work spanning media-driver correctness, flexible-array bou
 <td>
 <a href="https://lore.kernel.org/all/20260607111933.6398-1-med08elkadiri@gmail.com/"><b>media: venus: Annotate flex arrays with __counted_by()</b></a>
 <br>
-<sub>Annotated HFI flexible-array members with __counted_by() to improve CONFIG_UBSAN_BOUNDS coverage and enable stronger compiler object-size reasoning.</sub>
+<sub>Annotated flexible-array members in Qualcomm Venus HFI protocol structures with <code>__counted_by()</code>. The annotations explicitly connect each variable-length array to its element-count field, allowing the compiler and kernel sanitizers to reason more accurately about the valid bounds of the allocated object.</sub>
+<br>
+<sub>Recruiter context: proactive memory-safety hardening in a driver that processes firmware-provided data. The change improves run-time out-of-bounds detection through <code>CONFIG_UBSAN_BOUNDS</code> and strengthens compile-time object-size analysis.</sub>
 <br>
 <sub>Reviewed-by: Dmitry Baryshkov, Qualcomm · Reviewed-by: Konrad Dybcio, Qualcomm · Committed to <code>media.git/next</code></sub>
 </td>
@@ -221,7 +239,11 @@ Upstream Linux kernel work spanning media-driver correctness, flexible-array bou
 <td>
 <a href="https://lore.kernel.org/all/20260322150733.45817-1-med08elkadiri@gmail.com/"><b>sfc: fix spelling mistake</b></a>
 <br>
-<sub>Forwarded upstream by maintainer Edward Cree for inclusion during the next firmware-header regeneration.</sub>
+<sub>Submitted a documentation and source-comment correction for the Solarflare network-driver firmware interface. While small, this contribution followed the full upstream Linux kernel contribution process: identifying the issue, preparing a standards-compliant patch, engaging with the subsystem maintainer, and having the change forwarded for inclusion in a future generated firmware header update.</sub>
+<br>
+<sub>Recruiter context: demonstrates familiarity with the Linux kernel development workflow, including patch submission, maintainer review, and subsystem integration.</sub>
+<br>
+<sub>Forwarded upstream by maintainer Edward Cree for inclusion in the next firmware-header regeneration.</sub>
 </td>
 <td><code>net/sfc</code></td>
 <td><img src="https://img.shields.io/badge/Accepted-4CAF50?style=flat-square" /></td>
@@ -236,15 +258,35 @@ Upstream Linux kernel work spanning media-driver correctness, flexible-array bou
 
 <table>
 <tr>
-<td align="center"><strong>Patch Submissions</strong><br><code>9</code></td>
-<td align="center"><strong>Committed / Queued / Accepted</strong><br><code>7</code></td>
-<td align="center"><strong>Reviewed / Acked</strong><br><code>5</code></td>
-<td align="center"><strong>Credited Upstream Report</strong><br><code>1</code></td>
-<td align="center"><strong>Subsystems</strong><br><code>cred · keys · fscrypt · media · net</code></td>
+<td align="center">
+<strong>Linux Kernel Patches Submitted</strong><br>
+<code>9</code><br>
+<sub>Patch series and individual patches sent upstream</sub>
+</td>
+<td align="center">
+<strong>Patches Progressed Upstream</strong><br>
+<code>7</code><br>
+<sub>Committed, queued by maintainers, or accepted for integration</sub>
+</td>
+<td align="center">
+<strong>Maintainer Reviews / Acks</strong><br>
+<code>6</code><br>
+<sub>Patches receiving formal review or acknowledgement from subsystem maintainers</sub>
+</td>
+<td align="center">
+<strong>Upstream Bug Report Credit</strong><br>
+<code>1</code><br>
+<sub>Reported fscrypt issue credited in an upstream fix backported to stable kernels</sub>
+</td>
+<td align="center">
+<strong>Kernel Areas</strong><br>
+<code>5</code><br>
+<sub>cred · keys · fscrypt · media · net</sub>
+</td>
 </tr>
 </table>
 
-> 🟢 **Committed / Queued / Accepted** &nbsp; 🟩 **Reviewed / Acked** &nbsp; 🔵 **Submitted** &nbsp; 🟣 **Credited Report**
+> 🟢 **Progressed Upstream** = committed, queued, or accepted &nbsp; 🟩 **Reviewed / Acked** = maintainer validation received &nbsp; 🔵 **Submitted** = sent upstream and under review &nbsp; 🟣 **Upstream Credit** = issue report credited in a merged kernel fix
 
 <sub>Last updated: 03/08/2026</sub>
 
@@ -258,10 +300,10 @@ Upstream Linux kernel work spanning media-driver correctness, flexible-array bou
 
 | Area | Details |
 |------|---------|
-| Kernel / OS Internals | Linux kernel internals, syscall interfaces, VFS, keyrings, credentials, memory management, driver parsing |
-| Security Hardening | Slab-cache isolation, cross-cache attack mitigation, bounds checking, flexible-array safety, controlled error handling |
-| Reliability Engineering | Root-cause analysis, parser correctness, memory lifetime, fault handling, lockdep and syzbot-driven debugging |
-| Concurrency | Lock-free structures, atomics, memory ordering, spinlocks, RCU, lock hierarchy analysis |
+| Kernel / OS Internals | Linux kernel internals, syscall interfaces, VFS, keyrings, credentials, filesystem encryption, memory management, driver parsing |
+| Security Hardening | Slab-cache isolation, cross-cache attack mitigation, bounds checking, flexible-array safety, secure error handling |
+| Reliability Engineering | Root-cause analysis, parser invariants, memory lifetime, fault handling, lockdep analysis, syzbot-driven debugging |
+| Concurrency | Lock-free structures, atomics, memory ordering, spinlocks, RCU, lock hierarchy and deadlock analysis |
 | Performance | perf, flamegraphs, strace, eBPF, Google Benchmark, CPU-affinity-aware execution |
 | Cross-platform | Linux, macOS, FreeBSD, POSIX interfaces, compile-time platform abstraction |
 
