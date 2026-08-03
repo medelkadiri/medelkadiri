@@ -1,3 +1,4 @@
+The blurriness comes from forcing shield images to a fixed width and height. GitHub stretches the SVG badges, which makes the text look distorted. The cleanest GitHub-native solution is to use consistent monospace status labels instead of resized images.
 <div align="center">
 
 # Mohammed EL Kadiri
@@ -85,9 +86,9 @@ Upstream Linux kernel work across driver correctness, memory-safety hardening, k
 <tr>
 <th align="center" width="5%">#</th>
 <th>Contribution</th>
-<th width="15%">Subsystem</th>
-<th align="center" width="16%">Status</th>
-<th align="center" width="9%">Date</th>
+<th align="center" width="16%">Subsystem</th>
+<th align="center" width="13%">Status</th>
+<th align="center" width="10%">Date</th>
 </tr>
 
 <tr>
@@ -99,10 +100,8 @@ Upstream Linux kernel work across driver correctness, memory-safety hardening, k
 <br>
 <sub>Reported-by credit in upstream commit <code>696c030e1e34</code> · Fix authored by Eric Biggers · Added to the 6.12-stable and 7.1-stable trees.</sub>
 </td>
-<td><code>fs/crypto · security/keys</code></td>
-<td align="center">
-<img src="https://img.shields.io/badge/Credited%20fix-4CAF50?style=flat-square" alt="Credited upstream fix" width="128" height="20" />
-</td>
+<td align="center"><code>fs/crypto</code><br><code>security/keys</code></td>
+<td align="center"><code>Credited fix</code></td>
 <td align="center"><sub>14/06/2026</sub></td>
 </tr>
 
@@ -115,10 +114,8 @@ Upstream Linux kernel work across driver correctness, memory-safety hardening, k
 <br>
 <sub>The investigation contributed to the subsequent upstream fscrypt redesign credited above.</sub>
 </td>
-<td><code>security/keys</code></td>
-<td align="center">
-<img src="https://img.shields.io/badge/Submitted-2196F3?style=flat-square" alt="Submitted" width="128" height="20" />
-</td>
+<td align="center"><code>security/keys</code></td>
+<td align="center"><code>Submitted</code></td>
 <td align="center"><sub>14/06/2026</sub></td>
 </tr>
 
@@ -133,10 +130,8 @@ Upstream Linux kernel work across driver correctness, memory-safety hardening, k
 <br>
 <sub>Reviewed-by: Jarkko Sakkinen · Queued in <a href="https://git.kernel.org/pub/scm/linux/kernel/git/jarkko/linux-tpmdd.git/log/?h=for-next-keys">for-next-keys</a></sub>
 </td>
-<td><code>security/keys</code></td>
-<td align="center">
-<img src="https://img.shields.io/badge/Queued-4CAF50?style=flat-square" alt="Queued in maintainer tree" width="128" height="20" />
-</td>
+<td align="center"><code>security/keys</code></td>
+<td align="center"><code>Queued</code></td>
 <td align="center"><sub>13/06/2026</sub></td>
 </tr>
 
@@ -151,10 +146,8 @@ Upstream Linux kernel work across driver correctness, memory-safety hardening, k
 <br>
 <sub>Reviewed-by: Jarkko Sakkinen · Queued in <a href="https://git.kernel.org/pub/scm/linux/kernel/git/jarkko/linux-tpmdd.git/log/?h=for-next-keys">for-next-keys</a></sub>
 </td>
-<td><code>security/keys</code></td>
-<td align="center">
-<img src="https://img.shields.io/badge/Queued-4CAF50?style=flat-square" alt="Queued in maintainer tree" width="128" height="20" />
-</td>
+<td align="center"><code>security/keys</code></td>
+<td align="center"><code>Queued</code></td>
 <td align="center"><sub>13/06/2026</sub></td>
 </tr>
 
@@ -169,10 +162,8 @@ Upstream Linux kernel work across driver correctness, memory-safety hardening, k
 <br>
 <sub>Reviewed-by: Dmitry Baryshkov, Qualcomm · Committed to <code>media.git/next</code></sub>
 </td>
-<td><code>media/venus</code></td>
-<td align="center">
-<img src="https://img.shields.io/badge/Committed-4CAF50?style=flat-square" alt="Committed to maintainer tree" width="128" height="20" />
-</td>
+<td align="center"><code>media/venus</code></td>
+<td align="center"><code>Committed</code></td>
 <td align="center"><sub>10/06/2026</sub></td>
 </tr>
 
@@ -187,10 +178,8 @@ Upstream Linux kernel work across driver correctness, memory-safety hardening, k
 <br>
 <sub>Fixes: <code>9edaaa8e3e15</code> · Cc: stable@vger.kernel.org · Reviewed-by: Dmitry Baryshkov, Qualcomm · Committed to <code>media.git/next</code></sub>
 </td>
-<td><code>media/venus</code></td>
-<td align="center">
-<img src="https://img.shields.io/badge/Committed-4CAF50?style=flat-square" alt="Committed to maintainer tree" width="128" height="20" />
-</td>
+<td align="center"><code>media/venus</code></td>
+<td align="center"><code>Committed</code></td>
 <td align="center"><sub>10/06/2026</sub></td>
 </tr>
 
@@ -205,10 +194,8 @@ Upstream Linux kernel work across driver correctness, memory-safety hardening, k
 <br>
 <sub>Reviewed-by: Kees Cook</sub>
 </td>
-<td><code>kernel/cred</code></td>
-<td align="center">
-<img src="https://img.shields.io/badge/Reviewed-8BC34A?style=flat-square" alt="Reviewed by maintainer" width="128" height="20" />
-</td>
+<td align="center"><code>kernel/cred</code></td>
+<td align="center"><code>Reviewed</code></td>
 <td align="center"><sub>11/06/2026</sub></td>
 </tr>
 
@@ -223,10 +210,8 @@ Upstream Linux kernel work across driver correctness, memory-safety hardening, k
 <br>
 <sub>Acked-by: Vlastimil Babka, SUSE · Queued in <a href="https://git.kernel.org/pub/scm/linux/kernel/git/jarkko/linux-tpmdd.git/log/?h=for-next-keys">for-next-keys</a></sub>
 </td>
-<td><code>security/keys</code></td>
-<td align="center">
-<img src="https://img.shields.io/badge/Queued-4CAF50?style=flat-square" alt="Queued in maintainer tree" width="128" height="20" />
-</td>
+<td align="center"><code>security/keys</code></td>
+<td align="center"><code>Queued</code></td>
 <td align="center"><sub>04/06/2026</sub></td>
 </tr>
 
@@ -241,10 +226,8 @@ Upstream Linux kernel work across driver correctness, memory-safety hardening, k
 <br>
 <sub>Reviewed-by: Dmitry Baryshkov, Qualcomm · Reviewed-by: Konrad Dybcio, Qualcomm · Committed to <code>media.git/next</code></sub>
 </td>
-<td><code>media/venus</code></td>
-<td align="center">
-<img src="https://img.shields.io/badge/Committed-4CAF50?style=flat-square" alt="Committed to maintainer tree" width="128" height="20" />
-</td>
+<td align="center"><code>media/venus</code></td>
+<td align="center"><code>Committed</code></td>
 <td align="center"><sub>07/06/2026</sub></td>
 </tr>
 
@@ -257,10 +240,8 @@ Upstream Linux kernel work across driver correctness, memory-safety hardening, k
 <br>
 <sub>Forwarded upstream by maintainer Edward Cree.</sub>
 </td>
-<td><code>net/sfc</code></td>
-<td align="center">
-<img src="https://img.shields.io/badge/Accepted-4CAF50?style=flat-square" alt="Accepted" width="128" height="20" />
-</td>
+<td align="center"><code>net/sfc</code></td>
+<td align="center"><code>Accepted</code></td>
 <td align="center"><sub>22/03/2026</sub></td>
 </tr>
 
@@ -280,7 +261,7 @@ Upstream Linux kernel work across driver correctness, memory-safety hardening, k
 <td align="center">
 <strong>Integration Progress</strong><br>
 <code>7</code><br>
-<sub>Accepted, queued in maintainer trees, or committed upstream</sub>
+<sub>Accepted, queued in maintainer trees, or committed</sub>
 </td>
 <td align="center">
 <strong>Maintainer Review</strong><br>
@@ -290,12 +271,12 @@ Upstream Linux kernel work across driver correctness, memory-safety hardening, k
 <td align="center">
 <strong>Stable Tree Credit</strong><br>
 <code>1</code><br>
-<sub>Reported issue referenced by a fix added to stable kernel trees</sub>
+<sub>Reported issue referenced by a stable-kernel fix</sub>
 </td>
 </tr>
 </table>
 
-<sub>Statuses reflect different stages of the upstream process; a patch may be both reviewed and queued or committed.</sub><br>
+<sub>Statuses reflect different stages of upstream development; a patch may be both reviewed and queued or committed.</sub><br>
 <sub>Last updated: 03/08/2026</sub>
 
 </div>
