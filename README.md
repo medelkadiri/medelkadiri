@@ -1,6 +1,3 @@
-The blurriness comes from forcing shield images to a fixed width and height. GitHub stretches the SVG badges, which makes the text look distorted. The cleanest GitHub-native solution is to use consistent monospace status labels instead of resized images.
-<div align="center">
-
 # Mohammed EL Kadiri
 
 **Systems Software Engineer · Linux Kernel Contributor · Security & Reliability Engineering**
