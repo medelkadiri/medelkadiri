@@ -1,18 +1,21 @@
+<h1 align="center">Mohammed EL Kadiri</h1>
+
 <div align="center">
-# Mohammed EL Kadiri
 
-**Systems Software Engineer · Linux Kernel Contributor · Security & Reliability Engineering**
+<strong>Systems Software Engineer · Linux Kernel Contributor · Security & Reliability Engineering</strong>
 
-Systems software engineer focused on Linux kernel development, operating-system internals, security hardening, and low-level reliability engineering.  
+<br><br>
+
+Systems software engineer focused on Linux kernel development, operating-system internals, security hardening, and low-level reliability engineering.<br>
 I work on correctness, memory safety, synchronization, and failure handling across kernel subsystems, firmware-facing drivers, key management, filesystem encryption, and performance-sensitive systems components in C/C++17.
+
+<br><br>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mohammedelkadiri/)
 [![Medium](https://img.shields.io/badge/Medium-000000?style=flat&logo=medium&logoColor=white)](https://medium.com/@medelkadiri)
 [![Linux Kernel](https://img.shields.io/badge/Linux_Kernel-Contributor-FCC624?style=flat&logo=linux&logoColor=black)](https://lore.kernel.org/all/?q=med08elkadiri%40gmail.com)
 
 </div>
-
----
 
 ### What This GitHub Contains
 
