@@ -83,6 +83,16 @@ Upstream Linux kernel work across driver correctness, memory-safety hardening, k
 
 <br>
 
+> **Status guide:**  
+> <code>Submitted</code> — posted to the relevant upstream mailing list for review.  
+> <code>Reviewed</code> — formally reviewed by a subsystem maintainer or domain expert.  
+> <code>Queued</code> — accepted into a maintainer's integration tree for a future kernel release.  
+> <code>Committed</code> — committed to a subsystem maintainer tree.  
+> <code>Accepted</code> — accepted by the responsible maintainer for upstream inclusion.  
+> <code>Credited fix</code> — the issue report was attributed in an upstream fix; the implementation was authored by another kernel developer.
+
+<br>
+
 <table>
 <tr>
 <th align="center" width="5%">#</th>
@@ -277,7 +287,7 @@ Upstream Linux kernel work across driver correctness, memory-safety hardening, k
 </tr>
 </table>
 
-<sub>Statuses reflect different stages of upstream development; a patch may be both reviewed and queued or committed.</sub><br>
+<sub>Statuses represent different stages of the upstream process; a patch can be reviewed before being queued or committed.</sub><br>
 <sub>Last updated: 03/08/2026</sub>
 
 </div>
